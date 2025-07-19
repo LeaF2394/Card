@@ -1,0 +1,20 @@
+Download DOTween
+Import TextMeshPro Package
+Create a canvas In the scene, switch to Camera Space, 1920x1080
+Create a image as the card slot, set the width & height to a suitable value.
+Attach the "Horizontal Layout Group" & "HorizontalCardHolder" to the image, change the Child Alignment to "Middle Center" for the Horizontal Layout Group, Toggle "Width" for "Control Child Size" & "Force Child Expand"
+Set the CardSlotPrefab for the HorizontalCardHolder, and set the SpawnSlots to which you want.
+
+The Layout Of CardSlot:
+
+Slot(Root, Attach "Transform" Component)
+- BaseCard(Attach "Transform" & "BaseCard" Components)
+
+The Layout Of CardView:
+
+Card(Root, Attach: CardView, SortingGroup)
+- AnimationParent
+-- RotationParent
+--- CardBack (SpriteRenderer)
+--- CardFront (SpriteRenderer)
+--- Other Elements You Want
